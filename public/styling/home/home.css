@@ -1,0 +1,301 @@
+.home-background {
+    position: relative;
+    overflow-x: hidden;
+    background-color: #1b1b24;
+}
+
+.title-text {
+    height: 100vh;
+    position: relative;
+}
+
+.white-background {
+    width: 100%;
+    height: 100%;
+    background-color: #eeedff;
+    -webkit-mask-image: url(/public/img/home/mask.svg);
+    mask-image: url(/public/img/home/mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation-name: MOVE-BG;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    mask-size: 100%;
+    z-index: 99;
+}
+
+@keyframes MOVE-BG {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.title-text .text-right{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0;
+    line-height: calc(100vh - 200px);
+    display: inline-block;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1b1b24;
+    -webkit-mask-image: url(/public/img/home/mask.svg);
+    mask-image: url(/public/img/home/mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 92px;
+    mask-size: 100%;
+    z-index: 1;
+}
+
+.right-mask {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    -webkit-mask-image: url(/public/img/home/other-mask.svg);
+    mask-image: url(/public/img/home/other-mask.svg);
+    text-align: center;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    animation-name: MOVE-TEXT-BG;
+    animation-duration: 1s;
+    animation-delay: 0.50s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes MOVE-TEXT-BG {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.title-text .right-mask .text-left{
+    position: static;
+    color: #eeedff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: calc(100vh - 200px);
+    display: inline-block;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 92px;
+    z-index: 1;
+    animation-name: MOVE-TEXT;
+    animation-duration: 1s;
+    animation-delay: 0.50s;
+    animation-timing-function: linear;
+    transform: translateX(100%);
+    animation-fill-mode: forwards;
+}
+
+@keyframes MOVE-TEXT {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*
+
+
+        About me
+
+
+*/
+.about-me-title {
+    background-color: #1b1b24;
+    margin: 0;
+    width: 100%;
+   border-top: 7px solid #cea716;
+}
+
+.about-me-title h2 {
+    margin: 0;
+    padding: 75px 0px 25px 0px;
+    text-align: center;
+    color: #eeedff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+}
+
+.about-me {
+    padding: 100px;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.about-me img{
+    grid-column: span 1;
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 15px;
+    box-shadow: 10px 15px 15px rgb(12, 12, 12);
+    border: 5px solid #cea716;
+}
+
+.about-me-content {
+    color: #eeedff;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-column: span 1;
+    font-size: 32px;
+    margin: 0;
+    padding: 0px 200px 0px 0px ;
+}
+
+.about-me-content p{
+    margin: 0;
+    padding: 0px 0px 25px 0px;
+}
+
+
+/*
+
+
+        About this site
+
+
+*/
+
+.about-this-website-title {
+    border-top: 7px solid #eeedff;
+    color: #eeedff;
+    text-align: center;
+    padding: 75px 0px 25px 0px;
+}
+
+.about-this-website-title h2{
+    margin: 0;
+    padding: 0px;
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.about-this-website {
+    padding: 100px;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto 30%;
+}
+
+.about-this-website-content {
+    color: #eeedff;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-column: span 1;
+    font-size: 32px;
+    margin: 0;
+    padding: 50px 200px 0px 0px ;
+}
+
+.about-this-website-content h2{
+    margin: 0px;
+    padding: 0px;
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.about-this-website img {
+    grid-column: span 1;
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 15px;
+    box-shadow: 10px 15px 15px rgb(12, 12, 12);
+    border: 5px solid #cea716;
+}
+
+
+/*
+
+
+        My projects
+
+
+*/
+
+.my-projects-title {
+    border-top: 7px solid #cea716;
+    color: #eeedff;
+    text-align: center;
+    padding: 75px 0px 75px 0px;
+}
+
+.my-projects-title h2{
+    margin: 0;
+    padding: 0px;
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.projects-parallax{
+    z-index: 1;
+    background-image: url("/public/img/Spring.JPG");
+    filter:blur(7px);
+
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.my-projects {
+    background-color: transparent;
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("/public/img/Spring.JPG");
+
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-bottom: 7px solid #cea716;
+}
+
+.projects-blur {
+    padding: 50px 0px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.contact-title {
+    height: 500px;
+}

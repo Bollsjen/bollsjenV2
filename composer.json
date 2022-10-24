@@ -1,0 +1,17 @@
+{
+    "name": "bollsjen/bollsjen",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Magnus",
+            "email": "support@bollsjen.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}
